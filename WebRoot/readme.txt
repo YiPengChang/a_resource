@@ -1,11 +1,11 @@
-        1µ¼Èë¿ª·¢°ü£º
+        1å¯¼å…¥å¼€å‘åŒ…ï¼š
         	mysql
         	c3p0
         	dbutils
         	fileupload
         	io
         	jstl
-        2´´½¨×éÖ¯ÀàµÄ°ü
+        2åˆ›å»ºç»„ç»‡ç±»çš„åŒ…
         	cn.itcast.dao
         	cn.itcast.daoimple
         	cn.itcast.domain
@@ -16,7 +16,7 @@
         	cn.itcast.utils
         	cn.itcast.test
         	
-        3´´½¨¿âºÍ±í
+        3åˆ›å»ºåº“å’Œè¡¨
         create database day18;
         use day18;
         create table fileupload
@@ -31,3 +31,5 @@
         );
 		
 		spring boot + spring cloud
+		æ˜¯æ˜¯æ˜¯æ›´æ–°
+		
