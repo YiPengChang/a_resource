@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.multipart.maxSize" value="204857600000"></constant>
+    <package name="itcast" namespace="/struts" extends="struts-default">
+    	<global-results>
+    		<result name="index" type="redirect">/index.jsp</result>
+    		<result name="message">/WEB-INF/jsp/message.jsp</result>
+    		<result name="download">/WEB-INF/jsp/download.jsp</result>
+    		<result name="getAll" type="redirectAction">find_getAll</result>
+    	</global-results>
+    	<action name="upload_*" class="cn.itcast.action.Upload" method="{1}">
+    		<result name="input">/WEB-INF/jsp/upload.jsp</result>
+    		<result name="uploadUI">/WEB-INF/jsp/upload.jsp</result>
+    	</action>
+    	
+    	<action name="find_*" class="cn.itcast.action.Find" method="{1}">
+    	</action>
+    	<action name="download" class="cn.itcast.action.Downfile">
+    	</action>
+    	<action name="delete_*" class="cn.itcast.action.Delete" method="{1}">
+    		<result type="redirectAction">find_getAll</result>
+    		<result name="myuploadfile" type="redirectAction">my_myuploadfile</result>
+    		<result name="myyunpan" type="redirectAction">my_myyunpan</result>
+    	</action>
+    	<action name="adduser" class="cn.itcast.action.Adduser">
+    		<result name="input">/adduserUI.jsp</result>
+    		<result name="adduserUI">/adduserUI.jsp</result>
+    	</action>
+    	<action name="login_*" class="cn.itcast.action.Login" method="{1}">
+    		<result name="f">/loginUI.jsp</result>
+    	</action>
+    	<action name="my_*" class="cn.itcast.action.My" method="{1}">
+    		<result name="myuploadfile" >/WEB-INF/jsp/myuploadfile.jsp</result>
+    		<result name="myyunpan" >/WEB-INF/jsp/myyunpan.jsp</result>
+    		
+    		<result name="my">/WEB-INF/jsp/my.jsp</result>
+    	</action>
+    	
+    	
+    </package>
+
+</struts>

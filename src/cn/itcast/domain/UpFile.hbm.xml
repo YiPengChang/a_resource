@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.itcast.domain">
+
+	<class name="UpFile">
+		<id name="id">
+			<generator class="assigned"/>
+		</id>
+		<property name="uuidname" not-null="true"/>	
+		<property name="realname" not-null="true"/>	
+		<property name="username" not-null="true"/>	
+		<property name="uptime" type="timestamp"/>	
+		<property name="description"/>	
+		<property name="savepath" not-null="true"/>	
+	</class>
+
+</hibernate-mapping>
+

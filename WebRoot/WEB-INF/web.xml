@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	
+	<filter>
+		<filter-name>DBfilter</filter-name>
+		<filter-class>cn.itcast.Filter.DBfilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>DBfilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>	
+	 <filter>
+        <filter-name>struts2</filter-name>
+        <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>struts2</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+  <display-name></display-name>
+  <servlet>
+    <servlet-name>uploadServlet</servlet-name>
+    <servlet-class>cn.itcast.web.uploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>listServlet</servlet-name>
+    <servlet-class>cn.itcast.web.listServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>downloadServlet</servlet-name>
+    <servlet-class>cn.itcast.web.downloadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>deleteServlet</servlet-name>
+    <servlet-class>cn.itcast.web.deleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>findlikeServlet</servlet-name>
+    <servlet-class>cn.itcast.web.findlikeServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>uploadServlet</servlet-name>
+    <url-pattern>/servlet/uploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>listServlet</servlet-name>
+    <url-pattern>/servlet/listServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>downloadServlet</servlet-name>
+    <url-pattern>/servlet/downloadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteServlet</servlet-name>
+    <url-pattern>/servlet/deleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>findlikeServlet</servlet-name>
+    <url-pattern>/servlet/findlikeServlet</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
