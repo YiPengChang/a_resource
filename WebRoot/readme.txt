@@ -29,3 +29,5 @@
         	description varchar(255),
         	savepath varchar(255) not null
         );
+		
+		spring boot + spring cloud
